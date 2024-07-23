@@ -1,0 +1,104 @@
+.card {
+    width: 250px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s;
+    border-radius: 10px;
+
+    box-shadow: 4px 12px 20px 0px rgb(0 0 0 / 26%);
+
+        font-size: 30px;
+    // font-weight: 900;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    position: relative; /* Needed for inner element positioning */
+  }
+  
+  .card:hover {
+    border-radius: 15px;
+    transform: scale(1.2);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 15px;
+    color: #FFDB57;
+    font-family: "Waiting for the Sunrise", cursive;
+    letter-spacing: 3px;
+  }
+
+  .textLabel{
+    background-color: #ffdb57c8;
+    color:#000000;
+    width: 100%;
+    text-align: center;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+
+  }
+  
+  .card:hover .first-content {
+    height: 0px;
+    opacity: 0;
+  }
+  
+  .second-content {
+    height: 0%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    font-size: 18px !important;
+    transform: rotate(90deg) scale(-1);
+    background-color: #ffdd60dd;
+    padding: 0 20px;
+  }
+
+  .second-content :nth-child(1){
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    padding-bottom: 5px;
+    font-family: "Waiting for the Sunrise", cursive;
+  }
+
+  .second-content :nth-child(2){
+    padding-bottom: 20px;
+  }
+
+  .second-content :nth-child(3){
+    padding: 10px 10px 0 10px;    
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+    border: 0px;
+    font-size: 16px;
+    font-weight: 700;    
+
+  }
+  
+  .second-content :nth-child(3):hover{
+    color: #000000;
+
+  }
+  
+  .card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size: 1.8rem;
+    transform: rotate(0deg);
+  }
+  

@@ -1,0 +1,78 @@
+
+  
+  button {
+    --primary-color: var(--mainblue);
+    --hovered-color: var(--mainblue);
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 0.5rem;
+    align-items: center;
+
+  }
+  
+  .button-p {
+    margin: 0;
+    position: relative;
+    font-size: 14px !important;
+    font-weight: 700 !important; 
+    color: var(--primary-color) !important;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    letter-spacing: 1px !important;
+    display: flex;
+    align-items: center;
+
+  }
+
+  
+  
+  button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+  }
+  
+  button p::before {
+    position: absolute;
+    /*   box-sizing: border-box; */
+    content: "";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+  }
+  
+  button:hover::after {
+    width: 100%;
+  }
+  
+  button:hover p::before {
+    width: 100%;
+  }
+  
+  button:hover svg {
+    transform: translateX(4px);
+    color: var(--mainblue);
+  }
+  
+  button svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+  }
+  
+
+  .svg-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
